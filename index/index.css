@@ -1,0 +1,125 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+html,
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+ 
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    background-image: url("../img/attendance_img.jpeg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 125%;
+    background-position:  center ;
+}
+
+
+.main-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    z-index: 999;
+    width: 55vw;
+    border: 2px solid rgb(209, 3, 255);
+}
+
+.left-part {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid white;
+}
+.left-part h1{
+    color: white;
+    font-family: Quicksand;
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 60px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.left-part p{
+    text-align: left;
+    font-size: 18px;
+    color: #d395ff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 15px;
+}
+
+.right-part {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 200px 300px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    justify-content: center;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+    outline: 0;
+}
+
+.button-64 span {
+    background-color: rgb(5, 6, 45);
+    padding: 18px 26px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.button-64:hover span {
+    background: none;
+}
+
+p {
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 100%, #00DDEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-emphasis-color: transparent;
+}

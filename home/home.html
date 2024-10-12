@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+        function redirectToLecturerRegister() {
+            var password = prompt("Enter password to access lecturer registration:");
+            if (password === "1234") {
+                window.location.href = "../lecturer/lecturer_register.html";
+            } else {
+                alert("Incorrect password.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="left">
+            <p>Attendance Management System</p>
+        </div>
+        <div class="right">
+            <div class="right-text">
+                <a href="../index/index.html"><p>Start</p></a>
+                <a href="../lecturer/lecturer_login.html"><p>Login</p></a>
+            </div>
+        </div>
+    </div>
+
+    <div><img src="../img/new-logo.png" class="logo" alt="logo"></div>
+    <div class="container">
+        <h2>Student Information</h2>
+        <form action="../dashboard/student_dashboard.php" method="POST" onsubmit="return validateForm()">
+            <label for="student_id">Enter Student ID:</label>
+            <input type="text" id="student_id" name="student_id" required>
+            <input type="submit" value="View Details">
+        </form>
+        <div class="menu">
+            <div class="links left">
+                <a href="../student/student_register.html">Student Registration</a>
+            </div>
+            <hr style="background-color: black; width:1px; height:50%">
+            <div class="links right">
+                <a href="#" onclick="redirectToLecturerRegister()">Lecturer Registration</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            return true;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('../img/img3.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        
+        .wrapper {
+            position: relative;
+            width: 750px;
+            background: rgba(255, 255, 255, .1);
+            border: 2px solid rgba(255, 255, 255, .2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            backdrop-filter: blur(50px);
+            border-radius: 10px;
+            color: #fff;
+            padding: 40px 35px 55px;
+            margin: 0px 10px;
+        }
+        
+        .wrapper h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .input-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px; /* Add space between input boxes */
+        }
+        
+        .input-field {
+            width: calc(50% - 10px);
+            height: 50px;
+            position: relative;
+        }
+        
+        .input-field input,
+        .input-field select {
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, .2);
+            outline: none;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 6px;
+            padding: 12px 15px 12px 45px; /* Add padding to make space for the icon */
+            appearance: none;
+            line-height: 1.5;
+        }
+        
+        ::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            opacity: 1;
+        }
+        
+        .input-field select {
+            padding-left: 45px; /* Add space to prevent merging */
+        }
+        
+        .input-field i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .btn {
+            width: 100%;
+            height: 45px;
+            background: #fff;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background-color: blue;
+            color: white;
+            transition: ease 0.5s;
+        }
+        
+        select {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 6px;
+            font-size: 16px;
+            appearance: none;
+        }
+        
+        select option {
+            color: black;
+        }
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .links a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Student Registration</h2>
+        <form action="student_register.php" method="post" enctype="multipart/form-data">
+            <div class="input-box">
+                <div class="input-field">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="student_id" name="student_id" placeholder="Enter Student ID" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="student_name" name="student_name" placeholder="Enter Full Name" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email_address" name="email_address" placeholder="Enter Email" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" id="phone" name="phone" placeholder="Enter Phone Number">
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <i class="fas fa-building"></i>
+                    <select id="department" name="department_id" required>
+                        <option value="">Select Department</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-university" ></i>
+                    <select id="faculty" name="faculty_id" required>
+                        <option value="">Select Faculty</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <i class="fas fa-book"></i>
+                    <select id="course" name="course_id" required>
+                        <option value="">Select Course</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-image"></i>
+                    <input type="file" id="photo" name="photo">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <center>
+            <div class="links"></div>
+                <a href="../home/home.html" style="color:white;  text-align:center;">Back to Home</a>
+            </div>
+        </center>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch departments on page load
+            fetch('get_options.php?type=department')
+                .then(response => response.json())
+                .then(data => {
+                    const departmentSelect = document.getElementById('department');
+                    data.forEach(department => {
+                        const option = document.createElement('option');
+                        option.value = department.department_id;
+                        option.textContent = department.department_name;
+                        departmentSelect.appendChild(option);
+                    });
+                });
+
+            // Fetch faculties based on selected department
+            document.getElementById('department').addEventListener('change', function() {
+                const departmentId = this.value;
+                fetch(`get_options.php?type=faculty&department_id=${departmentId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const facultySelect = document.getElementById('faculty');
+                        facultySelect.innerHTML = '<option value="">Select Faculty</option>'; // Clear existing options
+                        data.forEach(faculty => {
+                            const option = document.createElement('option');
+                            option.value = faculty.faculty_id;
+                            option.textContent = faculty.faculty_name;
+                            facultySelect.appendChild(option);
+                        });
+                        // Trigger course update based on new faculty
+                        document.getElementById('faculty').dispatchEvent(new Event('change'));
+                    });
+            });
+
+            // Fetch courses based on selected faculty
+            document.getElementById('faculty').addEventListener('change', function() {
+                const facultyId = this.value;
+                fetch(`get_options.php?type=course&faculty_id=${facultyId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const courseSelect = document.getElementById('course');
+                        courseSelect.innerHTML = '<option value="">Select Course</option>'; // Clear existing options
+                        data.forEach(course => {
+                            const option = document.createElement('option');
+                            option.value = course.course_id;
+                            option.textContent = course.course_name;
+                            courseSelect.appendChild(option);
+                        });
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
