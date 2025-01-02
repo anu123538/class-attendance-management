@@ -1,1 +1,2 @@
 # class-attendance-management
+A class attendance management system is a simple platform built using HTML, CSS and JavaScript,  . It allows lecturers to track, update, and manage student attendance, view details, and generate reports. Key features include an attendance update button, student details display, and secure login/logout. This system saves time and improves accuracy for educational institutions.
